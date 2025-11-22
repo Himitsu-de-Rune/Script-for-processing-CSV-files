@@ -16,7 +16,7 @@ class TestPerformanceReport:
     def test_report_single_file(self):
         sample1_path = get_test_data_path('sample1.csv')
         if not sample1_path.exists():
-            pytest.skip("sample1.csv не найден")
+            pytest.skip('sample1.csv не найден')
         
         report = PerformanceReport([sample1_path])
         report.generate()
@@ -31,7 +31,7 @@ class TestPerformanceReport:
         sample2_path = get_test_data_path('sample2.csv')
         
         if not sample1_path.exists() or not sample2_path.exists():
-            pytest.skip("Тестовые файлы не найдены")
+            pytest.skip('Тестовые файлы не найдены')
         
         report = PerformanceReport([sample1_path, sample2_path])
         report.generate()
@@ -44,16 +44,16 @@ class TestPerformanceReport:
     def test_empty_file(self):
         empty_path = get_test_data_path('empty.csv')
         if not empty_path.exists():
-            pytest.skip("empty.csv не найден")
+            pytest.skip('empty.csv не найден')
         
         report = PerformanceReport([empty_path])
-        with pytest.raises(Exception, match="Не удалось загрузить данные из файлов"):
+        with pytest.raises(Exception, match='Не удалось загрузить данные из файлов'):
             report.generate()
     
     def test_invalid_data_file(self):
         invalid_path = get_test_data_path('invalid_data.csv')
         if not invalid_path.exists():
-            pytest.skip("invalid_data.csv не найден")
+            pytest.skip('invalid_data.csv не найден')
         
         report = PerformanceReport([invalid_path])
         report.generate()
@@ -71,7 +71,7 @@ class TestPerformanceReport:
     def test_display_method(self, capsys):
         sample1_path = get_test_data_path('sample1.csv')
         if not sample1_path.exists():
-            pytest.skip("sample1.csv не найден")
+            pytest.skip('sample1.csv не найден')
         
         report = PerformanceReport([sample1_path])
         report.generate()
@@ -85,7 +85,7 @@ class TestPerformanceReport:
     def test_specific_calculations(self):
         sample1_path = get_test_data_path('sample1.csv')
         if not sample1_path.exists():
-            pytest.skip("sample1.csv не найден")
+            pytest.skip('sample1.csv не найден')
         
         report = PerformanceReport([sample1_path])
         report.generate()
