@@ -1,0 +1,5 @@
+name,position,completed_tasks,performance,skills,team,experience_years
+Sarah Johnson,Frontend Developer,35,4.8,"React, Vue, JavaScript",Web Team,3
+David Chen,Backend Developer,42,4.9,"Python, FastAPI, MongoDB, Redis",API Team,4
+Emma Wilson,Data Scientist,31,4.7,"Python, TensorFlow, SQL, PyTorch",AI Team,5
+Liam Garcia,DevOps Engineer,48,5.0,"Docker, Kubernetes, AWS, CI/CD",Infrastructure Team,7
